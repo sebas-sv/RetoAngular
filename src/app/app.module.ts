@@ -5,15 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Forms
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Material
-//import { AppMaterialModule } from './app-material/app-material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTableModule } from '@angular/material/table';
-import {MatTabsModule} from '@angular/material/tabs';
+import { AppMaterialModule } from './app-material/app-material.module';
 // HttpClient
 import { HttpClientModule } from '@angular/common/http';
 // Components
@@ -25,8 +17,6 @@ import { FormEmployerComponent } from './components/form-employer/form-employer.
 // Features
 import { ViewemployerComponent } from './features/viewemployer/viewemployer.component';
 import { CreateemployerComponent } from './features/createemployer/createemployer.component';
-
-
 
 @NgModule({
   declarations: [
@@ -41,27 +31,17 @@ import { CreateemployerComponent } from './features/createemployer/createemploye
     CreateemployerComponent,
   ],
   imports: [
-     BrowserModule,
-    AppRoutingModule,// Forms
+    BrowserModule,
+    AppRoutingModule,
+    // Forms
     FormsModule,
     ReactiveFormsModule,
     // Material
-    //AppMaterialModule,
-    BrowserAnimationsModule,
-    MatSelectModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatTableModule,
-    MatIconModule,
-    MatTabsModule,
+    AppMaterialModule,
     //HttpClient
     HttpClientModule,
-
   ],
-  entryComponents:[
-    AppComponent
-  ],
+  entryComponents: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

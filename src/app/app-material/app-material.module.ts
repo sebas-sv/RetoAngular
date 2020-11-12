@@ -6,13 +6,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTableModule } from '@angular/material/table'
-
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [],
-  imports: [
-  ],
+  imports: [],
   exports: [
     BrowserAnimationsModule,
     MatSelectModule,
@@ -21,6 +20,7 @@ import { MatTableModule } from '@angular/material/table'
     MatButtonModule,
     MatTableModule,
     MatIconModule,
+    MatTabsModule,
   ],
 })
 export class AppMaterialModule {}
