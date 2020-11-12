@@ -1,0 +1,32 @@
+<div class="form">
+  <form [formGroup]="formEmployer" (ngSubmit)="onSubmit($event)">
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="Employee first name" formControlName="name">
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Salary</mat-label>
+        <input matInput placeholder="Employee salary" formControlName="salary">
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Age</mat-label>
+        <input matInput placeholder="Employee age" formControlName="age">
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <br>
+    <button mat-raised-button color="primary" type="submit">{{accion}}</button>
+
+  </form>
+
+</div>
