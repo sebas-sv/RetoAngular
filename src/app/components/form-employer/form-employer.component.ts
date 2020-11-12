@@ -17,7 +17,6 @@ export class FormEmployerComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    //this.initForm();
   }
 
   ngOnChanges(){

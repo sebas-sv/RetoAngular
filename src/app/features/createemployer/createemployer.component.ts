@@ -10,7 +10,7 @@ import { EmployerService } from 'src/app/services/employer.service';
 export class CreateemployerComponent implements OnInit {
   formValue;
   dataEdit;
-  id:number;
+  id: number;
 
   constructor(
     private employerService: EmployerService,
@@ -25,29 +25,22 @@ export class CreateemployerComponent implements OnInit {
   initForm() {
     this._route.params.subscribe((params) => {
       this.id = params['id'];
-      //console.log(this.id);
 
-      if(this.id != undefined){
+      if (this.id != undefined) {
         this.employerService.getEmployer(this.id).subscribe((res) => {
-        this.dataEdit = res.data;
-      });
-      }else{
-
+          this.dataEdit = res.data;
+        });
       }
-
-
-
-
     });
   }
 
   getFormValue(data) {
     this.formValue = data;
-    console.log("form",this.formValue);
-    if(this.id==undefined){
+    console.log('form', this.formValue);
+    if (this.id == undefined) {
       this.createEmployee(this.formValue);
     }
-    if(this.id !=undefined){
+    if (this.id != undefined) {
       this.updateEmployee(this.formValue);
     }
   }

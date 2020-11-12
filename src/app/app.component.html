@@ -1,18 +1,10 @@
 <nav mat-tab-nav-bar>
   <a mat-tab-link
-  [routerLink]="['']"
-  routerLinkActive #rla1="routerLinkActive"
-  [active]="rla1.isActive">Home
-</a>
-  <a mat-tab-link
-     [routerLink]="['/view']"
-     routerLinkActive #rla1="routerLinkActive"
-     [active]="rla1.isActive">Ver empleados
-  </a>
-  <a mat-tab-link
-     [routerLink]="['/create']"
-     routerLinkActive #rla2="routerLinkActive"
-     [active]="rla2.isActive">Crear empleado
+     *ngFor="let link of navLinks"
+     [routerLink]="['/'+link.path]"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    {{link.label}}
   </a>
 </nav>
 

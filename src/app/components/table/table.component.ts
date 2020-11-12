@@ -13,8 +13,6 @@ export class TableComponent implements OnInit {
   empleadoTest: EmployerCustom[];
   displayedColumns: string[];
 
-
-
   constructor(private employerService: EmployerService) {
     this.displayedColumns = ['id', 'nombre', 'salario', 'edad', 'acciones'];
   }
@@ -25,15 +23,9 @@ export class TableComponent implements OnInit {
     this.empleadoTest = this.empleados;
   }
 
- /* editEmployer(id, data){
-    this.employerService.update(data).subscribe((res) => {
-      console.log('Update:', res);
-    });;
-  }*/
-
-  deleteEmployer(id){
+  deleteEmployer(id) {
     this.employerService.delete(id).subscribe((res) => {
       console.log('Delete:', res);
-    });;
+    });
   }
 }
